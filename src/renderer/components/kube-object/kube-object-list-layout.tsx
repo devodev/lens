@@ -95,7 +95,7 @@ export class KubeObjectListLayout<K extends KubeObject> extends React.Component<
           }),
           ...[customizeHeader].flat(),
         ]}
-        renderItemMenu={(item: K) => <KubeObjectMenu object={item} />} // safe because we are dealing with KubeObjects here
+        renderItemMenu={item => <KubeObjectMenu object={item} />}
       />
     );
   }
